@@ -1,7 +1,6 @@
 body{
     font-family:Arial, Helvetica, sans-serif;
     text-transform: capitalize;
-    font-size: x-large;
     padding: 0;
     margin: 0;
     background-color: rgba(215, 217, 219, 0.277);
@@ -9,7 +8,7 @@ body{
 nav{
     background:linear-gradient(90deg,rgb(45, 160, 226),rgb(31, 73, 97));
      color: aliceblue;
-     font-size: x-large;
+     
      margin-bottom: 10px;
 }
 nav h1{
@@ -36,7 +35,7 @@ nav h1{
     width: 100%;
 }
 #ft{
-    font-size: 60px;
+    font-size: 30px;
     color: rgb(51, 82, 109);
 }
 #ftdes{
@@ -129,12 +128,12 @@ width: 100%;
 }
 .stribe3 span{
     padding:100px 200px;
-    font-size: 100px;
+    font-size: 80px;
     text-align: center;
     color: rgb(236, 212, 71);
 }
 span p{
-    font-size: 30px;
+    font-size: 20px;
     color: aliceblue;
 
 }
