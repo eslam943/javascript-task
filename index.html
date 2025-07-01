@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+</head>
+
+<body>
+    <nav>
+        <h1>our team</h1>
+        <ul class="ul">
+            <li class="li">home</li>
+            <li class="li">team</li>
+            <li class="li">stats</li>
+            <li class="li">contact</li>
+        </ul>
+    </nav>
+    <div id="stirbe1">
+        <h1 id="ft">our professinal team</h1>
+        <p id="ftdes">
+            we are a team of skilled professional in development and design ,
+            working together to provide the best technical solutions for our clients
+        </p>
+    </div>
+    <h2 class="hcards">team members</h2>
+    <div id="cards">
+
+    </div>
+
+    </div>
+    <div class="buttons"style="display: flex;  margin:20px; justify-content: center; gap: 20px; ">
+        <button onclick="add()" style=" padding: 30px;font-size: 40px;border-radius: 40px; color: aliceblue;border: none;background-color: rgb(50, 215, 0)">add member</button>
+        <button onclick="remove()" style=" padding: 30px;font-size: 40px;border-radius: 40px; color: aliceblue; background-color: rgb(255, 0, 55);border: none;">remove member</button>
+    </div>
+    <script>
+        let arr = [];
+        let langs;
+        let languages = [];
+        function add() {
+            let name = prompt("Enter your name:");
+            let role = prompt("Enter your role:");
+            let description = prompt("Enter a description:");
+            let numoflanguages = prompt("Enter number of languages:");
+            for (let i = 0; i < numoflanguages; i++) {
+                languages[i] = prompt("Enter language " + (i + 1) + ":");
+            }
+
+            displaylang();
+            arr.push(`
+            <div class="cardon">
+                <img src="OIP.jpeg" alt="example photo" />
+                <div style="margin: 50px">
+                    <h1>${name}</h1>
+                    <h3>${role}</h3>
+                    <p>${description}</p>
+                    <div style="display: flex; 
+                    flex-direction: column;">
+                        <div style="display: flex;
+                        flex-direction: row;flex-wrap: wrap;
+                        justify-content: space-evenly;">
+                        <ul class="ul">
+                      `
+                + langs +
+                `
+                    </ul>    
+                    </div>
+                    <div>
+                    <button style="color: aliceblue; background-color: rgb(0, 166, 255)">
+                        view profile
+                    </button>
+                    <button style="background-color: aliceblue; color: rgb(0, 166, 255)">
+                        contact
+                    </button></div>    
+                    </div>
+                </div>
+            `)
+            displayCards();
+        }
+        function displaylang() {
+            langs = '';
+            for (let i = 0; i < languages.length; i++) {
+                langs += `<li class="li">${languages[i]}</li>`;
+            }
+
+        }
+        function displayCards() {
+
+            document.getElementById("cards").innerHTML = '';
+            displaylang();
+            for (let i = 0; i < arr.length; i++) {
+                document.getElementById("cards").innerHTML += arr[i];
+            }
+        }
+        function remove() {
+            arr.pop();
+            displayCards();
+        }
+    </script>
+    <div>
+        <div class="stribe2">
+            <h2>our team stats</h2>
+            <div class="stribe3">
+                <span>
+                    15+
+                    <p>bla bla bla bla</p>
+                </span>
+
+                <span>
+                    50+
+                    <p>bla bla bla bla</p>
+                </span>
+                <span>
+                    100%
+                    <p>bla bla bla bla</p>
+                </span>
+                <span>
+                    10+
+                    <p>bla bla bla bla</p>
+                </span>
+            </div>
+        </div>
+        <br />
+        <footer>
+            <p>&copy; 2024 Our Team. All rights reserved.</p>
+        </footer>
+</body>
+
+</html>
